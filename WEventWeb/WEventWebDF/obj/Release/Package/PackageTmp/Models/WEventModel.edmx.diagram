@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="658e78ad864e4dd9a7f87cecf8762a2a" Name="Diagram1">
+        <EntityTypeShape EntityType="WEventDataModel.Account" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WEventDataModel.Department" Width="1.5" PointX="0.875" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WEventDataModel.Event" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WEventDataModel.EventAccount" Width="1.5" PointX="2.875" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WEventDataModel.EventComment" Width="1.5" PointX="7.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WEventDataModel.EventLog" Width="1.5" PointX="5.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WEventDataModel.Place" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_Account_dbo_Department_DID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_Event_dbo_Account_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_EventAccount_dbo_Account_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_EventComment_dbo_Account_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_EventLog_dbo_Account_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_Event_dbo_Place_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_EventAccount_dbo_Event_EID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_EventComment_dbo_Event_EID" ManuallyRouted="false" />
+        <AssociationConnector Association="WEventDataModel.FK_dbo_EventLog_dbo_Event_EID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

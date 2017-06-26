@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Account]
+(
+	[UID] INT IDENTITY (1, 1) NOT NULL, 
+    [Name] NVARCHAR(100) NOT NULL, 
+    [Email] NVARCHAR(100) NOT NULL, 
+    [Password] NVARCHAR(100) NOT NULL, 
+    [DID] INT NOT NULL, 
+    [Online] BIT NOT NULL DEFAULT 0,
+	PRIMARY KEY CLUSTERED ([UID] ASC),
+	CONSTRAINT [FK_dbo.Account_dbo.Department_DID] FOREIGN KEY ([DID])
+		REFERENCES [dbo].[Department] ([DID]) ON DELETE CASCADE
+)

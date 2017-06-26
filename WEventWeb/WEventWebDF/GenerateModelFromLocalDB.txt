@@ -1,0 +1,20 @@
+﻿
+
+//// USE Command Promp ///////////////////////////
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>SqlLocalDB.exe start ProjectsV13
+LocalDB instance "ProjectsV13" started.
+
+C:\WINDOWS\system32>SqlLocalDB.exe info ProjectsV13
+Name:               ProjectsV13
+Version:            13.0.2151.0
+Shared name:
+Owner:              DESKTOP-LD21RCR\peter
+Auto-create:        No
+State:              Running
+Last start time:    4/19/2017 12:43:22 AM
+Instance pipe name: np:\\.\pipe\LOCALDB#80218EF4\tsql\query
+
+C:\WINDOWS\system32>

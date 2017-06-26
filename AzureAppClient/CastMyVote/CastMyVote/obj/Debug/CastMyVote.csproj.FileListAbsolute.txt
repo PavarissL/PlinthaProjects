@@ -1,0 +1,55 @@
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\CastMyVote.dll
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\CastMyVote.pdb
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Core.dll
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Platform.dll
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Core.pdb
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Core.xml
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Platform.pdb
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\obj\Debug\CastMyVote.MainPage.xaml.g.cs
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\obj\Debug\CastMyVote.ResultsPage.xaml.g.cs
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\obj\Debug\CastMyVote.dll
+D:\Xamarin\Classes\XClasses-Azure\AZR115-Building-an-azure-mobile-app-client\Lab Materials\Excercise\CastMyVote\CastMyVote\obj\Debug\CastMyVote.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\CastMyVote.dll.config
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\CastMyVote.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\CastMyVote.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Newtonsoft.Json.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\SQLitePCL.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\SQLitePCLRaw.batteries_green.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\SQLitePCLRaw.core.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\System.Net.Http.Extensions.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\System.Net.Http.Primitives.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Core.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Platform.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Microsoft.WindowsAzure.Mobile.SQLiteStore.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Newtonsoft.Json.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\System.Net.Http.Extensions.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\System.Net.Http.Primitives.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Core.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Core.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Platform.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.csproj.App.config
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.MainPage.xaml.g.cs
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.ResultsPage.xaml.g.cs
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.csprojResolveAssemblyReference.cache
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Plugin.Connectivity.Abstractions.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Plugin.Connectivity.dll
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Plugin.Connectivity.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Plugin.Connectivity.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\Plugin.Connectivity.Abstractions.xml
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.dll.mdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\CastMyVote.dll.mdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\obj\Debug\CastMyVote.dll.mdb
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\bin\Debug\CastMyVote.dll.mdb

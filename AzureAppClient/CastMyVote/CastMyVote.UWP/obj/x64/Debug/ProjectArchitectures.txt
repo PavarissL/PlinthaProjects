@@ -1,0 +1,2 @@
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote.UWP\CastMyVote.UWP.csproj;x64
+D:\PlinthaProjects\AzureAppClient\CastMyVote\CastMyVote\CastMyVote.csproj;neutral

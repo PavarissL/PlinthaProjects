@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WEventDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DID" Type="Int32" Nullable="false" />
+    <Property Name="Online" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK_dbo_Account_dbo_Department_DID" FromRole="Account" ToRole="Department" />
+    <NavigationProperty Name="Events" Relationship="Self.FK_dbo_Event_dbo_Account_UID" FromRole="Account" ToRole="Event" />
+    <NavigationProperty Name="EventAccounts" Relationship="Self.FK_dbo_EventAccount_dbo_Account_UID" FromRole="Account" ToRole="EventAccount" />
+    <NavigationProperty Name="EventComments" Relationship="Self.FK_dbo_EventComment_dbo_Account_UID" FromRole="Account" ToRole="EventComment" />
+    <NavigationProperty Name="EventLogs" Relationship="Self.FK_dbo_EventLog_dbo_Account_UID" FromRole="Account" ToRole="EventLog" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DID" />
+    </Key>
+    <Property Name="DID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CompanyKey" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK_dbo_Account_dbo_Department_DID" FromRole="Department" ToRole="Account" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Name="EID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StarDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PID" Type="Int32" Nullable="false" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="Public" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_dbo_Event_dbo_Account_UID" FromRole="Event" ToRole="Account" />
+    <NavigationProperty Name="Place" Relationship="Self.FK_dbo_Event_dbo_Place_PID" FromRole="Event" ToRole="Place" />
+    <NavigationProperty Name="EventAccounts" Relationship="Self.FK_dbo_EventAccount_dbo_Event_EID" FromRole="Event" ToRole="EventAccount" />
+    <NavigationProperty Name="EventComments" Relationship="Self.FK_dbo_EventComment_dbo_Event_EID" FromRole="Event" ToRole="EventComment" />
+    <NavigationProperty Name="EventLogs" Relationship="Self.FK_dbo_EventLog_dbo_Event_EID" FromRole="Event" ToRole="EventLog" />
+  </EntityType>
+  <EntityType Name="EventAccount">
+    <Key>
+      <PropertyRef Name="EUID" />
+    </Key>
+    <Property Name="EUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UID" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_dbo_EventAccount_dbo_Account_UID" FromRole="EventAccount" ToRole="Account" />
+    <NavigationProperty Name="Event" Relationship="Self.FK_dbo_EventAccount_dbo_Event_EID" FromRole="EventAccount" ToRole="Event" />
+  </EntityType>
+  <EntityType Name="EventComment">
+    <Key>
+      <PropertyRef Name="ECID" />
+    </Key>
+    <Property Name="ECID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CommentDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_dbo_EventComment_dbo_Account_UID" FromRole="EventComment" ToRole="Account" />
+    <NavigationProperty Name="Event" Relationship="Self.FK_dbo_EventComment_dbo_Event_EID" FromRole="EventComment" ToRole="Event" />
+  </EntityType>
+  <EntityType Name="EventLog">
+    <Key>
+      <PropertyRef Name="ELID" />
+    </Key>
+    <Property Name="ELID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="Int32" Nullable="false" />
+    <Property Name="UID" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Account" Relationship="Self.FK_dbo_EventLog_dbo_Account_UID" FromRole="EventLog" ToRole="Account" />
+    <NavigationProperty Name="Event" Relationship="Self.FK_dbo_EventLog_dbo_Event_EID" FromRole="EventLog" ToRole="Event" />
+  </EntityType>
+  <EntityType Name="Place">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImageURI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Events" Relationship="Self.FK_dbo_Event_dbo_Place_PID" FromRole="Place" ToRole="Event" />
+  </EntityType>
+  <Association Name="FK_dbo_Account_dbo_Department_DID">
+    <End Role="Department" Type="Self.Department" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Account" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="DID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Event_dbo_Account_UID">
+    <End Role="Account" Type="Self.Account" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventAccount_dbo_Account_UID">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="EventAccount" Type="Self.EventAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="EventAccount">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventComment_dbo_Account_UID">
+    <End Role="Account" Type="Self.Account" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EventComment" Type="Self.EventComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="EventComment">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventLog_dbo_Account_UID">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="EventLog" Type="Self.EventLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="EventLog">
+        <PropertyRef Name="UID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Event_dbo_Place_PID">
+    <End Role="Place" Type="Self.Place" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Place">
+        <PropertyRef Name="PID" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventAccount_dbo_Event_EID">
+    <End Role="Event" Type="Self.Event" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EventAccount" Type="Self.EventAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EID" />
+      </Principal>
+      <Dependent Role="EventAccount">
+        <PropertyRef Name="EID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventComment_dbo_Event_EID">
+    <End Role="Event" Type="Self.Event" Multiplicity="1" />
+    <End Role="EventComment" Type="Self.EventComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EID" />
+      </Principal>
+      <Dependent Role="EventComment">
+        <PropertyRef Name="EID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventLog_dbo_Event_EID">
+    <End Role="Event" Type="Self.Event" Multiplicity="1" />
+    <End Role="EventLog" Type="Self.EventLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EID" />
+      </Principal>
+      <Dependent Role="EventLog">
+        <PropertyRef Name="EID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WEventDataEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="Events" EntityType="Self.Event" />
+    <EntitySet Name="EventAccounts" EntityType="Self.EventAccount" />
+    <EntitySet Name="EventComments" EntityType="Self.EventComment" />
+    <EntitySet Name="EventLogs" EntityType="Self.EventLog" />
+    <EntitySet Name="Places" EntityType="Self.Place" />
+    <AssociationSet Name="FK_dbo_Account_dbo_Department_DID" Association="Self.FK_dbo_Account_dbo_Department_DID">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Event_dbo_Account_UID" Association="Self.FK_dbo_Event_dbo_Account_UID">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventAccount_dbo_Account_UID" Association="Self.FK_dbo_EventAccount_dbo_Account_UID">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="EventAccount" EntitySet="EventAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventComment_dbo_Account_UID" Association="Self.FK_dbo_EventComment_dbo_Account_UID">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="EventComment" EntitySet="EventComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventLog_dbo_Account_UID" Association="Self.FK_dbo_EventLog_dbo_Account_UID">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="EventLog" EntitySet="EventLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Event_dbo_Place_PID" Association="Self.FK_dbo_Event_dbo_Place_PID">
+      <End Role="Place" EntitySet="Places" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventAccount_dbo_Event_EID" Association="Self.FK_dbo_EventAccount_dbo_Event_EID">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventAccount" EntitySet="EventAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventComment_dbo_Event_EID" Association="Self.FK_dbo_EventComment_dbo_Event_EID">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventComment" EntitySet="EventComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventLog_dbo_Event_EID" Association="Self.FK_dbo_EventLog_dbo_Event_EID">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventLog" EntitySet="EventLogs" />
+    </AssociationSet>
+    <EntitySet Name="C__RefactorLog" EntityType="WEventDataModel.C__RefactorLog" />
+  </EntityContainer>
+  <EntityType Name="C__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="Guid" Nullable="false" />
+  </EntityType>
+</Schema>

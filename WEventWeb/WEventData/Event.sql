@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[Event]
+(
+	[EID] INT IDENTITY (1,1) NOT NULL, 
+    [Name] NVARCHAR(200) NOT NULL, 
+    [StarDate] DATETIME NOT NULL, 
+    [EndDate] DATETIME NOT NULL, 
+    [PID] INT NOT NULL, 
+    [UID] INT NOT NULL, 
+    [Public] BIT NOT NULL DEFAULT 1,
+	PRIMARY KEY CLUSTERED ([EID] ASC),
+    CONSTRAINT [FK_dbo.Event_dbo.Place_PID] FOREIGN KEY ([PID]) 
+        REFERENCES [dbo].[Place] ([PID]) ON DELETE CASCADE,
+	CONSTRAINT [FK_dbo.Event_dbo.Account_UID] FOREIGN KEY ([UID]) 
+        REFERENCES [dbo].[Account] ([UID]) ON DELETE CASCADE
+)

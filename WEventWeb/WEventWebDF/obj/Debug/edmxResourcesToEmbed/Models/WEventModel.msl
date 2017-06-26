@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WEventDataModelStoreContainer" CdmEntityContainer="WEventDataEntities1">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="WEventDataModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DID" ColumnName="DID" />
+          <ScalarProperty Name="Online" ColumnName="Online" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="WEventDataModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DID" ColumnName="DID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyKey" ColumnName="CompanyKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="WEventDataModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StarDate" ColumnName="StarDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Public" ColumnName="Public" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventAccounts">
+      <EntityTypeMapping TypeName="WEventDataModel.EventAccount">
+        <MappingFragment StoreEntitySet="EventAccount">
+          <ScalarProperty Name="EUID" ColumnName="EUID" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventComments">
+      <EntityTypeMapping TypeName="WEventDataModel.EventComment">
+        <MappingFragment StoreEntitySet="EventComment">
+          <ScalarProperty Name="ECID" ColumnName="ECID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventLogs">
+      <EntityTypeMapping TypeName="WEventDataModel.EventLog">
+        <MappingFragment StoreEntitySet="EventLog">
+          <ScalarProperty Name="ELID" ColumnName="ELID" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Places">
+      <EntityTypeMapping TypeName="WEventDataModel.Place">
+        <MappingFragment StoreEntitySet="Place">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ImageURI" ColumnName="ImageURI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__RefactorLog">
+      <EntityTypeMapping TypeName="WEventDataModel.C__RefactorLog">
+        <MappingFragment StoreEntitySet="__RefactorLog">
+          <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

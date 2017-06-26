@@ -1,0 +1,14 @@
+D:\PavarissProjects\MVC\WEventWeb\WEventData\bin\Debug\WEventData.dacpac
+D:\PavarissProjects\MVC\WEventWeb\WEventData\bin\Debug\WEventData.dll
+D:\PavarissProjects\MVC\WEventWeb\WEventData\bin\Debug\WEventData.pdb
+D:\PavarissProjects\MVC\WEventWeb\WEventData\obj\Debug\WEventData.dll
+D:\PavarissProjects\MVC\WEventWeb\WEventData\obj\Debug\WEventData.pdb
+D:\PavarissProjects\MVC\WEventWeb\WEventData\obj\Debug\Model.xml
+D:\PavarissProjects\MVC\WEventWeb\WEventData\obj\Debug\refactor.xml
+D:\PavarissProjects\MVC\WEventWeb\WEventData\obj\Debug\postdeploy.sql
+D:\PavarissProjects\MVC\WEventWeb\WEventData\obj\Debug\predeploy.sql
+D:\PlinthaProjects\WEvent\WEventData\bin\Debug\WEventData.dacpac
+D:\PlinthaProjects\WEvent\WEventData\bin\Debug\WEventData.dll
+D:\PlinthaProjects\WEvent\WEventData\bin\Debug\WEventData.pdb
+D:\PlinthaProjects\WEvent\WEventData\obj\Debug\WEventData.dll
+D:\PlinthaProjects\WEvent\WEventData\obj\Debug\WEventData.pdb

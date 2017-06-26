@@ -1,0 +1,9 @@
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\interactivityListView.UWP.csprojResolveAssemblyReference.cache
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\App.g.i.cs
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\App.g.cs
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\MainPage.g.i.cs
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\MainPage.g.cs
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\App.xaml
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\MainPage.xaml
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\App.xbf
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\UWP\obj\x86\Debug\MainPage.xbf

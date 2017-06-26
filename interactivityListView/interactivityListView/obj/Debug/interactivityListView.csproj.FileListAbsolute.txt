@@ -1,0 +1,14 @@
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\interactivityListView.dll
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\interactivityListView.pdb
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Core.dll
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Platform.dll
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Core.pdb
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Core.xml
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Platform.pdb
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\obj\Debug\interactivityListView.csprojResolveAssemblyReference.cache
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\obj\Debug\interactivityListView.Views.interactiveListViewXaml.xaml.g.cs
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\obj\Debug\interactivityListView.dll
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\obj\Debug\interactivityListView.pdb

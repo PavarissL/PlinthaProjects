@@ -1,0 +1,2 @@
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\interactivityListView\interactivityListView.csproj;neutral
+D:\Xamarin\Sample\InteractivityListView\interactivityListView\WinPhone81\interactivityListView.WinPhone81.csproj;neutral

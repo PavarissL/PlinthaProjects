@@ -1,0 +1,20 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Event] (Table)
+       [dbo].[EventAccount] (Table)
+       [dbo].[EventComment] (Table)
+       [dbo].[EventLog] (Table)
+       [dbo].[Place] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Event] (Default Constraint)
+
+** Supporting actions

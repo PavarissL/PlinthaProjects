@@ -1,0 +1,2 @@
+D:\PlinthaProjects\BAY\BAY003\BAY003\BAY003.UWP\BAY003.UWP.csproj;x86
+D:\PlinthaProjects\BAY\BAY003\BAY003\BAY003\BAY003.csproj;neutral

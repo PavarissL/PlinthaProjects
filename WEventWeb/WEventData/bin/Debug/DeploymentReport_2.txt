@@ -1,0 +1,30 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Account]
+       [dbo].[Department]
+       [dbo].[Event]
+       [dbo].[EventAccount]
+       [dbo].[EventComment]
+       [dbo].[EventLog]
+       [dbo].[Place]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Account] (Default Constraint)
+       unnamed constraint on [dbo].[Event] (Default Constraint)
+     Table rebuild
+       [dbo].[Account] (Table)
+       [dbo].[Department] (Table)
+       [dbo].[Event] (Table)
+       [dbo].[EventAccount] (Table)
+       [dbo].[EventComment] (Table)
+       [dbo].[EventLog] (Table)
+       [dbo].[Place] (Table)
+
+** Supporting actions

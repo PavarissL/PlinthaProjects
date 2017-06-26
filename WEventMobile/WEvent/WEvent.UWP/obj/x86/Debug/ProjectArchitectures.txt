@@ -1,0 +1,2 @@
+D:\PlinthaProjects\WEventMobile\WEvent\WEvent.UWP\WEvent.UWP.csproj;x86
+D:\PlinthaProjects\WEventMobile\WEvent\WEvent\WEvent.csproj;neutral

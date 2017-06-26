@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WEvent;assembly=WEvent"
+             x:Class="WEvent.EventPage"
+             Title="Events" >
+
+    <ContentPage.ToolbarItems>        
+        <ToolbarItem Text="+" Clicked="OnAddEventClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" Android="add.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="!" Clicked="OnViewPendingEventClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" Android="notifyactiveblack.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="Logout" Clicked="OnLogoutButtonClicked" />
+        <ToolbarItem Text="Account" Clicked="OnAccountButtonClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageResourceConverter x:Key="imageResourceCvt" />
+            <local:BirthdayConverter x:Key="birthdayCvt" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--<ListView x:Name="allEmployees" 
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding .}"
+            IsPullToRefreshEnabled="True"
+            Refreshing="OnRefreshing"
+            HasUnevenRows="True">-->
+
+        <ListView x:Name="allEvents" 
+            CachingStrategy="RecycleElement"
+            IsPullToRefreshEnabled="True"
+            Refreshing="OnRefreshing"
+            HasUnevenRows="True">
+
+            <ListView.Header>
+            <ContentView Padding="0,5" BackgroundColor="Gray">
+                <Label FontSize="Large" TextColor="White" Text="TODO : Show Online User" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                <!-- TODO : Show Image for people online -->
+            </ContentView>
+        </ListView.Header>
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="250"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image WidthRequest="70" Aspect="AspectFit" Source="{Binding HeadshotUrl, Converter={StaticResource imageResourceCvt}}" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnProfileClicked"  NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <StackLayout Grid.Column="1" VerticalOptions="Center" >
+                            <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" />
+                            <Label Text="{Binding Email}" FontSize="Small" TextColor="Accent" />
+                        </StackLayout>
+
+                        <Image WidthRequest="300" Grid.Row="1" Grid.ColumnSpan="3" Aspect="AspectFit" 
+                               Source="{Binding PlaceImageUrl, Converter={StaticResource imageResourceCvt}}" />
+                        
+                        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Orientation="Horizontal" Spacing="15" Padding="8,0,8,0">
+                            <Image Source="plusoneblack.png" >
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnJoinClicked"  NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <Image Source="comment.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCommentClicked"  NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="personadd.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRequestClicked"  NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <!--Check if this Event send Requested to you-->
+                            <Image Source="priority.png" IsVisible="{Binding IsRequested}" HorizontalOptions="EndAndExpand" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="3" Grid.ColumnSpan="3" Orientation="Vertical"  Padding="8,0,8,20">
+                            
+                            <!--Check if You already Join / have People Join -->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="You and" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="8" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="Joins" FontAttributes="Bold" TextColor="Black" />
+                            </StackLayout>
+
+                            <!--Check if have status or Comment -->
+                            <!--IsStatus-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label IsVisible="true"  FontAttributes="Bold"  Text="name" TextColor="Black" >
+                                    <Label.GestureRecognizers >
+                                        <TapGestureRecognizer Tapped="OnProfileClicked" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label IsVisible="true" Text="comment1" />
+                            </StackLayout>
+                            <!--IsComment-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label IsVisible="true"  FontAttributes="Bold"  Text="name" TextColor="Black" >
+                                    <Label.GestureRecognizers >
+                                        <TapGestureRecognizer Tapped="OnProfileClicked" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label IsVisible="true" Text="comment2" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label IsVisible="true"  FontAttributes="Bold"  Text="name" TextColor="Black" >
+                                    <Label.GestureRecognizers >
+                                        <TapGestureRecognizer Tapped="OnProfileClicked" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label IsVisible="true" Text="comment3" />
+                            </StackLayout>
+                            <!-- Check if have Comment more than 2 -->
+                            <Label Text="View all comments ..." >
+                                <Label.GestureRecognizers >
+                                    <TapGestureRecognizer Tapped="OnCommentClicked" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            
+                        </StackLayout>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

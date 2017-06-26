@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Department]
+(
+	[DID] INT IDENTITY (1,1) NOT NULL, 
+    [Name] NVARCHAR(50) NOT NULL, 
+    [CompanyKey] NVARCHAR(150) NULL,
+	PRIMARY KEY CLUSTERED ([DID] ASC)
+)
